@@ -9,7 +9,7 @@ class SupersController < ApplicationController
     @super = Super.new(set_params)
     # @super.super_booking = @super_booking
     if @super.save
-      redirect_to super_path(@super)
+      redirect_to supers_path
     else
       render :new
     end
@@ -29,6 +29,6 @@ class SupersController < ApplicationController
   end
 
   def set_params
-    params.require(:super).permit(:super_name, :super_type, :universe, :availability)
+    params.require(:super).permit(:super_name, :super_type, :universe, :availability, :price)
   end
 end
