@@ -1,1 +1,24 @@
 // Specific CSS for your home-page
+h1 {
+  position: relative;
+  background: #483876;
+  // font-family: Arial, Helvetica, sans-serif;
+  // font-size: 50px;
+  // align-items: center;
+}
+
+// h2 {
+//   background-color: #483876;
+//   font-family: Arial, Helvetica, sans-serif;
+//   font-size: 20px;
+// }
+
+body {
+  position: relative;
+  background: #483876;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+}
