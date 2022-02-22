@@ -1,0 +1,2 @@
+class SuperDatesController < ApplicationController
+end

@@ -1,0 +1,6 @@
+<h3>Create a new super</h3>
+      <%= simple_form_for @super do |s| %>
+        <%= s.input :super_type, placeholder: 'Villain' %>
+        <%= s.input :universe %>
+        <%= s.submit class: 'btn btn-flat' %>
+      <% end %>
