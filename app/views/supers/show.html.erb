@@ -9,7 +9,15 @@
   </div>
   <div class="super-description">
       <p><strong>Descrption:</strong>I've been on the hunt for the perfect date for many years. My experience with webs is unmatched. Take me out and lets fly around the city!</p>
-      <%= link_to "Book Now", root_path, class: "btn btn-success", id: "bookdate" %>
+      <button onclick="bookedAlert()" id="bookdate">BOOK</button>
   </div>
 </div>
 <%# super_super_dates_path %>
+      <%# <%= "Book Now", class: "btn btn-success", id: "bookdate"%>
+
+      <script>
+
+      function bookedAlert() {
+        alert('Booked')
+      }
+      </script>
