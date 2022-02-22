@@ -10,6 +10,7 @@ david = User.create(user_name: "davidm", email: "davidm@gmail.com", password: "p
 emma = User.create(user_name: "emmac", email: "emmac@gmail.com", password: "password")
 
 puts "creating supers"
+
 Super.create!(user: kubi, super_name: "spiderman", super_type: "hero", universe: "Marvel", availability: false, price: 3)
 Super.create!(user: carolin, super_name: "elastic girl", super_type: "hero", universe: "Pixar", availability: true, price: 4)
 Super.create!(user: david, super_name: "bane", super_type: "hero", universe: "DC", availability: false, price: 5)
