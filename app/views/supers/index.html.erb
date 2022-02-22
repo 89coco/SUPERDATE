@@ -1,1 +1,18 @@
-<h1>Shows index of all supers</h1>
+<div>
+  <div class="text-center text-white">
+    <h1>SUPERDATES</h1>
+  </div>
+
+  <div class="container py-5">
+    <div class="row">
+      <% @supers.each do |sup| %>
+        <div class="card" style="width: 18rem;">
+            <%= link_to super_path(sup) do %>
+            <h5 class="card-title"><%= sup.super_name %></h5>
+            <p class="card-text"> <%= sup.universe %> </p>
+            <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
