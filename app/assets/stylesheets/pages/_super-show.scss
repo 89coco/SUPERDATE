@@ -1,0 +1,44 @@
+
+.show-card {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background-color: #EFEFF2;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: radial-gradient(#00AC5B, white);
+
+}
+
+.strengths {
+  border-radius: 10px;
+  width: 310px;
+  height: auto;
+}
+
+.spiderman {
+  width: 363px;
+  height: 350px;
+}
+
+.super-description {
+  margin-top: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: radial-gradient(#00AC5B, white);
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+}
+
+.super {
+  color: rgba($color: white, $alpha: 0.5);
+  text-align: center;
+}
+
+  #bookdate {
+    background-color: #00AC5B;
+    border-radius: 10px;
+  }

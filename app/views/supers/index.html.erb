@@ -1,16 +1,26 @@
-<div>
+<div style="background: rgb(72, 56, 118)">
   <div class="text-center text-white">
-    <h1>SUPERDATES</h1>
+    <h1 style="font-family: Bangers; font-size: 68px">SUPERDATES</h1>
   </div>
 
   <div class="container py-5">
     <div class="row">
       <% @supers.each do |sup| %>
-        <div class="card" style="width: 18rem;">
-            <%= link_to super_path(sup) do %>
-            <h5 class="card-title"><%= sup.super_name %></h5>
-            <p class="card-text"> <%= sup.universe %> </p>
-            <% end %>
+        <div class="card" style="background: #EFEFF2; width: 315px; height: 600px; padding: 15px; margin: 15px; border-radius: 25px;">
+            <img src="..." class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title super-name" style="text-transform: uppercase; font-size: 36px; font-family: Bangers;"><%= sup.super_name %></h5>
+              <h6><%= sup.universe %></h6>
+              <span class="badge badge-price" style="margin-top: 20px; margin-left: 85px; padding: 10px; font-size: 18px; font-family: Bangers; font-style: italic; border-radius: 15px;;"> £<%= sup.price %>/HR</span>
+              <p class="card-text" style="margin-top: 20px;"  > <%= sup.description %> </p>
+              <ul>
+              <li class="character"> <%= sup.strength %> STRENGTH </li>
+              <li class="character"> <%= sup.humour %> HUMOUR </li>
+              <li class="character"> <%= sup.romance %> ROMANCE </li>
+              <li class="character"> <%= sup.kindness %> KINDNESS </li>
+              </ul>
+              <%= link_to "", super_path(sup), class:"stretched-link"%>
+            </div>
         </div>
       <% end %>
     </div>
