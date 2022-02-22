@@ -2,5 +2,8 @@
       <%= simple_form_for @super do |s| %>
         <%= s.input :super_type, placeholder: 'Villain' %>
         <%= s.input :universe %>
+        <%= s.input :price %>
+        <%= s.input :availability %>
+        <%= s.input :super_name %>
         <%= s.submit class: 'btn btn-flat' %>
       <% end %>
