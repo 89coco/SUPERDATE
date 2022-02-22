@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :supers do
-    resources :super_dates, only: [ :create, :delete ]
+    resources :super_dates, only: [:create]
   end
+
+  resources :super_dates, only: [:destroy]
 end
