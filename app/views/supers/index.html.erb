@@ -6,16 +6,12 @@
   <div class="container py-5">
     <div class="row">
       <% @supers.each do |sup| %>
-        <div class="show-card-index" >
-          <% if sup.super_name == "the joker"%>
-          <img src="/assets/joker.png" class="card-img-top">
-          <% elsif sup.super_name == "bane"%>
-          <img src="/assets/bane.png" class="card-img-top">
-          <% elsif sup.super_name == "spiderman"%>
-          <img src="/assets/spider.png" class="card-img-top">
-          <% elsif sup.super_name == "elastic girl" %>
-          <img src="/assets/elasti.png" class="card-img-top">
-          <% end %>
+        <div class="card" style="background: #EFEFF2; width: 315px; height: 600px; padding: 15px; margin: 15px; border-radius: 25px;">
+        <% if sup.photos.attached? %>
+             <%= cl_image_tag sup.photos[0].key, height: 300, width: 400, crop: :pad, class: "card-img-top"%>
+        <% else %>
+            <img src="" alt="">
+        <% end %>
             <div class="card-body">
               <div class="card-title">
                 <h5 class="card-title super-name" style="text-transform: uppercase; font-size: 36px; font-family: 'Bangers';"><%= sup.super_name %></h5>
