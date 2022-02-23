@@ -1,1 +1,49 @@
 // Specific CSS for your home-page
+h1 {
+  position: relative;
+  background: #483876;
+}
+
+.landing-title {
+  margin-top: 50px;
+  font-size: 60px;
+}
+
+h2 {
+  background-color: #00AC5A;
+  padding: 10px 40px;
+  border-radius: 10px;
+}
+
+body {
+  position: relative;
+  background: #483876;
+}
+
+.container-supers {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landing-cards {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+
+.card-supers {
+  width: 130px;
+  height: 100px;
+  background-color: rgba($color: white, $alpha: 0.5);
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+  border-radius: 10px;
+}
+
+.super-links {
+  text-decoration: none;
+  font-size: 30px;
+  color: #00AC5A;
+}
