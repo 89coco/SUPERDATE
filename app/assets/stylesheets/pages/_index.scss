@@ -1,2 +1,44 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.show-card-index {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 15px;
+  background: white;
+}
+
+.btn-view {
+  background-color: #00AC5B;
+  border-radius: 10px;
+}
+
+.character-trait {
+  list-style-type: none;
+  font-family: 'Bangers';
+  margin-top: 10px;
+  color: #00AC5A;
+}
+
+.super-name {
+  text-transform: uppercase;
+  font-size: 36px;
+  font-family: 'Bangers';
+  }
+
+.card-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

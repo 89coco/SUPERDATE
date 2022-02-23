@@ -6,20 +6,34 @@
   <div class="container py-5">
     <div class="row">
       <% @supers.each do |sup| %>
-        <div class="card" style="background: #EFEFF2; width: 315px; height: 600px; padding: 15px; margin: 15px; border-radius: 25px;">
-            <img src="..." class="card-img-top">
+        <div class="show-card-index" >
+          <% if sup.super_name == "the joker"%>
+          <img src="/assets/joker.png" class="card-img-top">
+          <% elsif sup.super_name == "bane"%>
+          <img src="/assets/bane.png" class="card-img-top">
+          <% elsif sup.super_name == "spiderman"%>
+          <img src="/assets/spider.png" class="card-img-top">
+          <% elsif sup.super_name == "elastic girl" %>
+          <img src="/assets/elasti.png" class="card-img-top">
+          <% end %>
             <div class="card-body">
-              <h5 class="card-title super-name" style="text-transform: uppercase; font-size: 36px; font-family: Bangers;"><%= sup.super_name %></h5>
-              <h6><%= sup.universe %></h6>
-              <span class="badge badge-price" style="margin-top: 20px; margin-left: 85px; padding: 10px; font-size: 18px; font-family: Bangers; font-style: italic; border-radius: 15px;;"> £<%= sup.price %>/HR</span>
-              <p class="card-text" style="margin-top: 20px;"  > <%= sup.description %> </p>
-              <ul>
-              <li class="character"> <%= sup.strength %> STRENGTH </li>
-              <li class="character"> <%= sup.humour %> HUMOUR </li>
-              <li class="character"> <%= sup.romance %> ROMANCE </li>
-              <li class="character"> <%= sup.kindness %> KINDNESS </li>
-              </ul>
-              <%= link_to "", super_path(sup), class:"stretched-link"%>
+              <div class="card-title">
+                <h5 class="card-title super-name" style="text-transform: uppercase; font-size: 36px; font-family: 'Bangers';"><%= sup.super_name %></h5>
+                <h6><%= sup.universe %></h6>
+                <span class="badge badge-price" style="font-size: 18px;"> £<%= sup.price %>/HR</span>
+                <p class="card-text" style="margin-top: 20px; color: black;"  > <%= sup.description %> </p>
+              </div>
+              <div class="character">
+                <ul>
+                <li class="character-trait"> STRENGTH 🖤*<%= sup.strength %> </li>
+                <li class="character-trait"> HUMOUR 🖤*<%= sup.humour %> </li>
+                <li class="character-trait"> ROMANCE 🖤*<%= sup.romance %> </li>
+                <li class="character-trait"> KINDNESS 🖤*<%= sup.kindness %> </li>
+                </ul>
+              </div>
+              <div class="card-select">
+                <button class="btn-view" style=""> <%= link_to "VIEW", super_path(sup)%> </button>
+              </div>
             </div>
         </div>
       <% end %>
