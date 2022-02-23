@@ -1,3 +1,11 @@
 .badge-price {
   background-color: rgb(72, 56, 118);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Bangers';
+  border-radius: 15px;
 }

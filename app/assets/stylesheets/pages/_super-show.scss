@@ -38,7 +38,11 @@
   text-align: center;
 }
 
-  #bookdate {
-    background-color: #00AC5B;
-    border-radius: 10px;
-  }
+#bookdate {
+  background-color: #00AC5B;
+  border-radius: 10px;
+}
+
+#position {
+  object-position: center top;
+}

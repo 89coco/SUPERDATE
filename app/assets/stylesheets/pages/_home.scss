@@ -1,18 +1,18 @@
 // Specific CSS for your home-page
-h1 {
-  position: relative;
-  background: #483876;
-}
 
 .landing-title {
+  position: relative;
+  background: #483876;
+  color: #ffffff;
   margin-top: 50px;
   font-size: 60px;
 }
 
-h2 {
+.hero-selection {
   background-color: #00AC5A;
   padding: 10px 40px;
   border-radius: 10px;
+  color: #ffffff;
 }
 
 body {
@@ -30,20 +30,34 @@ body {
   display: flex;
   justify-content: space-around;
   width: 300px;
+  text-shadow: 1px 1px 0 #483876
 }
 
 .card-supers {
   width: 130px;
   height: 100px;
-  background-color: rgba($color: white, $alpha: 0.5);
+  background-color: rgba($color: #ffffff, $alpha: 0.5);
   justify-content: center;
   align-items: flex-end;
   display: flex;
   border-radius: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background: round;
+  background-color: #ffffff;
+}
+
+.card-supers:hover {
+  opacity: 1;
 }
 
 .super-links {
   text-decoration: none;
   font-size: 30px;
   color: #00AC5A;
+}
+
+.super-links:hover {
+  color: #483876;
+  text-shadow: 1px 1px 0 #00AC5A
 }

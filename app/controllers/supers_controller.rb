@@ -1,5 +1,5 @@
 class SupersController < ApplicationController
-  before_action :find, only: [:show]
+  before_action :find_super, only: [:show]
 
   def new
     @super = Super.new
@@ -7,8 +7,10 @@ class SupersController < ApplicationController
 
   def create
     @super = Super.new(set_params)
-    # @super.super_booking = @super_booking
+    @super.user = current_user
     if @super.save
+      p @super
+      p @super.photos
       redirect_to supers_path
     else
       render :new
@@ -24,11 +26,11 @@ class SupersController < ApplicationController
 
   private
 
-  def find
+  def find_super
     @super = Super.find(params[:id])
   end
 
   def set_params
-    params.require(:super).permit(:super_name, :super_type, :universe, :availability, :price)
+    params.require(:super).permit(:super_name, :user_id, :super_type, :universe, :availability, :price, :strength, :romance, :humour, :kindness, :description, photos: [])
   end
 end
