@@ -1,4 +1,5 @@
 class Super < ApplicationRecord
+  has_many_attached :photos
   belongs_to :user
   has_many :super_dates, dependent: :destroy
 

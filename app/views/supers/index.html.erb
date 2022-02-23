@@ -7,7 +7,11 @@
     <div class="row">
       <% @supers.each do |sup| %>
         <div class="card" style="background: #EFEFF2; width: 315px; height: 600px; padding: 15px; margin: 15px; border-radius: 25px;">
-            <img src="..." class="card-img-top">
+        <% if sup.photos.attached? %>
+             <%= cl_image_tag sup.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top"%>
+        <% else %>
+            <img src="" alt="">
+        <% end %>
             <div class="card-body">
               <h5 class="card-title super-name" style="text-transform: uppercase; font-size: 36px; font-family: Bangers;"><%= sup.super_name %></h5>
               <h6><%= sup.universe %></h6>
