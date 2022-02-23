@@ -1,18 +1,18 @@
 // Specific CSS for your home-page
-h1 {
-  position: relative;
-  background: #483876;
-}
 
 .landing-title {
+  position: relative;
+  background: #483876;
+  color: white;
   margin-top: 50px;
   font-size: 60px;
 }
 
-h2 {
+.hero-selection {
   background-color: #00AC5A;
   padding: 10px 40px;
   border-radius: 10px;
+  color: white;
 }
 
 body {
