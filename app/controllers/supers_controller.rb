@@ -8,7 +8,9 @@ class SupersController < ApplicationController
   def create
     @super = Super.new(set_params)
     @super.user = current_user
-    if @super.save!
+    if @super.save
+      p @super
+      p @super.photos
       redirect_to supers_path
     else
       render :new
@@ -29,6 +31,6 @@ class SupersController < ApplicationController
   end
 
   def set_params
-    params.require(:super).permit(:super_name, :user_id, :super_type, :universe, :availability, :price, :photos, :strength, :romance, :humour, :kindness, :description)
+    params.require(:super).permit(:super_name, :user_id, :super_type, :universe, :availability, :price, :strength, :romance, :humour, :kindness, :description, photos: [])
   end
 end

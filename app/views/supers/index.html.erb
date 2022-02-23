@@ -8,7 +8,7 @@
       <% @supers.each do |sup| %>
         <div class="card" style="background: #EFEFF2; width: 315px; height: 600px; padding: 15px; margin: 15px; border-radius: 25px;">
         <% if sup.photos.attached? %>
-             <%= cl_image_tag sup.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top"%>
+             <%= cl_image_tag sup.photos[0].key, height: 300, width: 400, crop: :pad, class: "card-img-top"%>
         <% else %>
             <img src="" alt="">
         <% end %>
