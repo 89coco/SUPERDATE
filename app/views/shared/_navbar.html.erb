@@ -20,8 +20,8 @@
           <li class="nav-item dropdown">
             <%= image_tag "https://res.cloudinary.com/dk3fbg9zm/image/upload/v1645630843/avatar_k3evbh.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Find Supers", supers_path, class: "dropdown-item" %>
-              <%= link_to "Profile", "#", class: "dropdown-item" %>
+              <%= link_to "Find Supers", root_path, class: "dropdown-item" %>
+              <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
