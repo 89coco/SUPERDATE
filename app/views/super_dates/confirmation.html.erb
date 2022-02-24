@@ -1,0 +1,19 @@
+<h1 id="bookingtitle" >Congratulations You've secured Your Date <%= @super_date.super.super_name %></h1>
+<div class="container">
+  <div class="cards" style="width: 18rem;">
+    <%= cl_image_tag @super_date.super.photos[0].key, height: 300, width: 400, crop: :pad, class: "card-img-top"%>
+    <div class="card-body">
+      <h5 class="card-titles">BOOKING</h5>
+      <p class="card-texts"><strong>Comments: </strong><%= @super_date.comment %></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-items">Date: <%= @super_date.date %></li>
+      <li class="list-group-items">For: <%= @super_date.hours %>/Hrs</li>
+      <li class="list-group-items">Total: £<%= @super_date.total %></li>
+    </ul>
+    <div class="card-body">
+      <%= link_to "Make another booking", supers_path, class: "bookbtn" %>
+      <a href="#" class="bookbtn">Profile</a>
+    </div>
+  </div>
+</div>
