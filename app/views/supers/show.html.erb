@@ -8,7 +8,12 @@
       <img src="https://res.cloudinary.com/dk3fbg9zm/image/upload/v1645544420/strengths_lqfqdf.png" alt="strengths-bar" class="strengths">
       <div class="super-description">
         <p><strong>Descrption:</strong><%= @super.description %></p>
-        <%= link_to "BOOK NOW", new_super_super_date_path(@super), class: "bt btn-success", id: "booknow" %>
+        <%= link_to "BOOK NOW", new_super_super_date_path(@super), class: "bt btn-success"%>
+        <%= link_to 'Edit', edit_super_path(@super) %>
+        <%= link_to "Remove",
+                  super_path(@super),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
       </div>
   </div>
 </div>

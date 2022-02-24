@@ -8,26 +8,24 @@
         <% @supers.each do |sup| %>
             <div class="show-card-index" style="width: 315px; height: 550px;">
             <% if sup.photos.attached? %>
-                <%= cl_image_tag sup.photos[0].key, height: 300, width: 400, crop: :pad, class: "card-img-top"%>
+                <%= cl_image_tag sup.photos[0].key, height: 300, width: 400, crop: :pad, class: "card-img-top" %>
             <% else %>
                 <img src="" alt="">
             <% end %>
                 <div class="card-body">
                   <div class="card-title">
                     <h5 class="card-title super-name" style="text-transform: uppercase; font-size: 36px; font-family: 'Bangers';"><%= sup.super_name %></h5>
-                    <h6><%= sup.universe %></h6>
+                    <h6 class="universe-title"><%= sup.universe %></h6>
                     <span class="badge badge-price" style="font-size: 18px;"> £<%= sup.price %>/HR</span>
                   </div>
-                  <div class="character" style="margin-top: 15px; margin-bottom: 15px;">
-                    <ul>
-                    <li class="character-trait"> STRENGTH  <%= "  ""🖤" * sup.strength.to_i %> </li>
-                    <li class="character-trait"> HUMOUR  <%= "  ""🖤" * sup.humour.to_i %> </li>
-                    <li class="character-trait"> ROMANCE  <%= "  ""🖤" * sup.romance.to_i %> </li>
-                    <li class="character-trait"> KINDNESS  <%= "  ""🖤" * sup.kindness.to_i %> </li>
-                    </ul>
+                  <div class="character">
+                    <p class="character-trait"> STRENGTH  <%= "  ""🖤" * sup.strength.to_i %> </p>
+                    <p class="character-trait"> HUMOUR  <%= "  ""🖤" * sup.humour.to_i %> </p>
+                    <p class="character-trait"> ROMANCE  <%= "  ""🖤" * sup.romance.to_i %> </p>
+                    <p class="character-trait"> KINDNESS  <%= "  ""🖤" * sup.kindness.to_i %> </p>
                   </div>
                   <div class="card-select">
-                    <button class="btn-view" style=""> <%= link_to "VIEW", super_path(sup)%> </button>
+                    <button class="btn-view" style="text-decoration: none;"> <%= link_to "VIEW", super_path(sup)%> </button>
                   </div>
                 </div>
             </div>
