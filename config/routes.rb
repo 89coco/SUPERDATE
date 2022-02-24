@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     resources :super_dates, only: [:new, :create]
   end
 
+  get '/super_dates/:id/confirmation', to: 'super_dates#confirmation', as: "date_confirmation"
+
   resources :super_dates, only: [:destroy]
 end
