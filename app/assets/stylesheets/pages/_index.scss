@@ -14,22 +14,24 @@
 }
 
 .btn-view {
+  text-decoration: none;
   background-color: #00AC5B;
   border-radius: 10px;
+  letter-spacing: 0.025em;
+  font-size: 18px;
 }
+
+.btn-view:hover {
+  color: #483876;
+  text-shadow: 1px 1px 0 #00AC5A
+}
+
 
 .character-trait {
   list-style-type: none;
   font-family: 'Bangers';
-  margin-top: 10px;
   color: #00AC5A;
 }
-
-// .character {
-//   border-color: black;
-//   border-style: dotted;
-//   border-width: thin;
-// }
 
 .super-name {
   text-transform: uppercase;

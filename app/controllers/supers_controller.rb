@@ -16,7 +16,7 @@ class SupersController < ApplicationController
   end
 
   def index
-    @supers = Super.all
+    @supers = Super.all.reverse
   end
 
   def show
