@@ -1,27 +1,31 @@
-.profile-banner element {
-  background-color: rgb(72, 56, 118);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5px;
-  padding: 10px;
-  font-size: 18px;
-  font-family: 'Helvetica';
-  border-radius: 15px;
-  color: white;
-  border-color: white;
-}
-
-
-.profile-banner element-active {
+.profile-banner-element {
+  // background-color: rgb(72, 56, 118);
   background-color: white;
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   align-items: center;
   margin-top: 5px;
-  padding: 10px;
   font-size: 18px;
   font-family: 'Helvetica';
-  border-radius: 15px;
+  color: purple;
+  border-style: solid;
   border-color: white;
+  border-radius: 20px;
+  padding: 20px 20px;
 }
+
+
+
+
+// .profile-banner element {
+//   background-color: white;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin-top: 5px;
+//   padding: 10px;
+//   font-size: 18px;
+//   font-family: 'Helvetica';
+//   border-radius: 15px;
+//   border-color: white;
+// }
