@@ -16,7 +16,11 @@ class SupersController < ApplicationController
   end
 
   def index
-    @supers = Super.all.reverse
+    if params[:filter].present?
+      @supers = Super.where(super_type: params[:filter])
+    else
+      @supers = Super.where(super_type: "villain")
+    end
   end
 
   def show
