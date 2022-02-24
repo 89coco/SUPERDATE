@@ -7,7 +7,7 @@
       <h2 class="hero-selection" style="margin-top: 70px;">CHOOSE YOUR SUPERDATE</h2>
       <div class="landing-cards mt-4">
         <div class="card-supers" style="background-image: url(https://www.pngitem.com/pimgs/m/106-1068296_batman-cartoon-hd-png-download.png)">
-          <div> <%= link_to "HERO", supers_path, class: "super-links" %>
+          <div> <%= link_to "HERO", supers_path(filter: "hero"), class: "super-links" %>
           </div>
         </div>
         <div class="card-supers" style="background-image: url(https://i0.wp.com/i.ya-webdesign.com/images/joker-clipart-11.gif)"><%= link_to "VILLAIN", supers_path, class: "super-links" %>
