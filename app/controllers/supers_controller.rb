@@ -9,8 +9,6 @@ class SupersController < ApplicationController
     @super = Super.new(set_params)
     @super.user = current_user
     if @super.save
-      p @super
-      p @super.photos
       redirect_to supers_path
     else
       render :new
