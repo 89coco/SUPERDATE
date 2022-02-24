@@ -1,0 +1,21 @@
+.create-super {
+  flex-direction: column;
+  padding: 35px;
+  color: white;
+   h3 {
+     font-size: 40px;
+   }
+}
+
+.radios {
+  width: 60vw;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.super-input {
+  margin-bottom: 40px;
+}
