@@ -15,6 +15,7 @@
 
 .btn-view {
   text-decoration: none;
+  // color: white;
   background-color: #00AC5B;
   border-radius: 10px;
   letter-spacing: 0.025em;
@@ -43,10 +44,39 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #483876;
 }
 
 .card-select {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.universe-title {
+  color: #00AC5A;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+// .card-img-top {
+//   border-radius: 15px;
+// }
+
+// ul.new-style {
+//   justify-content: space-between;
+//   color: red !important
+// }
+
+.character {
+  text-align: justify;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+img {
+  padding: 20px;
+  border: 5px solid #00AC5A;
+  // width: 200px;
+  // margin-bottom: 20px;
 }
