@@ -27,7 +27,6 @@
   text-shadow: 1px 1px 0 #00AC5A
 }
 
-
 .character-trait {
   list-style-type: none;
   font-family: 'Bangers';
@@ -59,24 +58,39 @@
   font-weight: bold;
 }
 
-// .card-img-top {
-//   border-radius: 15px;
-// }
-
-// ul.new-style {
-//   justify-content: space-between;
-//   color: red !important
-// }
-
 .character {
   text-align: justify;
   margin-top: 15px;
   margin-bottom: 15px;
+  letter-spacing: 5px;
 }
 
-img {
-  padding: 20px;
+.card-img > img {
+  object-fit: cover;
+  width: calc(min(75vw, 500px));
+  height: calc(min(75vw, 500px));
+  object-position: top;
+  border-radius: 25px;
+  flex-direction: column;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-img-top {
   border: 5px solid #00AC5A;
-  // width: 200px;
-  // margin-bottom: 20px;
+}
+
+.character-trait p {
+  font-stretch: expanded;
+}
+
+.btn-view:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.card-body {
+  display: flex;
+  align-items: left !important;
 }

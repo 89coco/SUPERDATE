@@ -7,11 +7,13 @@
     <div class="row justify-content-center">
         <% @supers.each do |sup| %>
             <div class="show-card-index" style="width: 315px; height: 550px;">
+            <div class="card-img">
             <% if sup.photos.attached? %>
-                <%= cl_image_tag sup.photos[0].key, height: 300, width: 400, crop: :pad, class: "card-img-top" %>
+                <%= cl_image_tag sup.photos[0].key, class: "card-img-top" %>
             <% else %>
                 <img src="" alt="">
             <% end %>
+            </div>
                 <div class="card-body">
                   <div class="card-title">
                     <h5 class="card-title super-name" style="text-transform: uppercase; font-size: 36px; font-family: 'Bangers';"><%= sup.super_name %></h5>
