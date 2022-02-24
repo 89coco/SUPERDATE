@@ -2,25 +2,14 @@
 
 <div class="container col-6 mt-3">
   <div class="show-card">
-    <img src="https://res.cloudinary.com/dk3fbg9zm/image/upload/v1645544250/spiderman_aikbu3.png" alt="spiderman" class="hero-avatar">
-    <h1>Spiderman</h1>
-    <h3>£3000/HR</h3>
-    <img src="https://res.cloudinary.com/dk3fbg9zm/image/upload/v1645544420/strengths_lqfqdf.png" alt="strengths-bar" class="strengths">
-  </div>
-  <div class="super-description">
-      <p><strong>Description: </strong>I've been on the hunt for the perfect date for many years. My experience with webs is unmatched. Take me out and lets fly around the city!</p>
-      <button onclick="bookedAlert()" id="bookdate">BOOK</button>
+      <%= cl_image_tag @super.photos[0].key, height: 300, width: 400, crop: :pad, class: "card-img-top"%>
+      <h1> <%= @super.super_name %></h1>
+      <h3><% @super.price %></h3>
+      <img src="https://res.cloudinary.com/dk3fbg9zm/image/upload/v1645544420/strengths_lqfqdf.png" alt="strengths-bar" class="strengths">
+      <div class="super-description">
+        <p><strong>Descrption:</strong><%= @super.description %></p>
+        <%= link_to "BOOK NOW", new_super_super_date_path(@super), class: "bt btn-success"%>
+      </div>
   </div>
 </div>
-<%# super_super_dates_path %>
-      <%# <%= "Book Now", class: "btn btn-success", id: "bookdate"%>
 
-      <script>
-
-      function bookedAlert() {
-        alert('Booked')
-      }
-      </script>
-
-<%# potentially to add %>
-<%# <p class="card-text" style="margin-top: 20px; color: black;"  > <%= sup.description %>
