@@ -1,1 +1,17 @@
-<%= render "form", super: @super %>
+<div class="container">
+<h3>Create a Superdate</h3>
+      <%= simple_form_for(@super) do |f| %>
+        <%= f.collection_radio_buttons :super_type, [['hero', 'Hero'], ['villain', 'Villain']], :first, :last %>
+        <%= f.input :universe, collection: ['Marvel', 'DC', 'Pixar', 'Hogwarts'] %>
+        <%= f.input :super_name %>
+        <%= f.input :strength %>
+        <%= f.input :humour %>
+        <%= f.input :romance %>
+        <%= f.input :kindness %>
+        <%= f.input :price %>
+        <%= f.input :description %>
+        <%= f.input :availability %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.submit class: 'btn btn-success' %>
+      <% end %>
+</div>

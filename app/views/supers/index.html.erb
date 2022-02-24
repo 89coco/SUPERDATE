@@ -21,12 +21,10 @@
                     <span class="badge badge-price" style="font-size: 18px;"> £<%= sup.price %>/HR</span>
                   </div>
                   <div class="character">
-                    <ul>
-                    <li class="character-trait"> STRENGTH <%= "  ""🖤" * sup.strength.to_i %> </li>
-                    <li class="character-trait"> HUMOUR  <%= "  ""🖤" * sup.humour.to_i %> </li>
-                    <li class="character-trait"> ROMANCE  <%= "  ""🖤" * sup.romance.to_i %> </li>
-                    <li class="character-trait"> KINDNESS  <%= "  ""🖤" * sup.kindness.to_i %> </li>
-                    </ul>
+                    <p class="character-trait"> STRENGTH  <%= "  ""🖤" * sup.strength.to_i %> </p>
+                    <p class="character-trait"> HUMOUR  <%= "  ""🖤" * sup.humour.to_i %> </p>
+                    <p class="character-trait"> ROMANCE  <%= "  ""🖤" * sup.romance.to_i %> </p>
+                    <p class="character-trait"> KINDNESS  <%= "  ""🖤" * sup.kindness.to_i %> </p>
                   </div>
                   <div class="card-select">
                     <button class="btn-view" style="text-decoration: none;"> <%= link_to "VIEW", super_path(sup)%> </button>

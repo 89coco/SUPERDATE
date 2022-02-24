@@ -17,9 +17,9 @@ class SupersController < ApplicationController
 
   def index
     if params[:filter].present?
-      @supers = Super.where(super_type: params[:filter])
+      @supers = Super.where(super_type: params[:filter]).reverse
     else
-      @supers = Super.where(super_type: "villain")
+      @supers = Super.all.reverse
     end
   end
 
