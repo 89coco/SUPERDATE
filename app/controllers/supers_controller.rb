@@ -1,5 +1,5 @@
 class SupersController < ApplicationController
-  before_action :find_super, only: [:show]
+  before_action :find_super, only: [:show, :destroy]
 
   def new
     @super = Super.new
@@ -20,6 +20,11 @@ class SupersController < ApplicationController
   end
 
   def show
+  end
+
+  def destroy
+    @super.destroy
+    redirect_to supers_path
   end
 
   private

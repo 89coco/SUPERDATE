@@ -9,7 +9,10 @@
       <div class="super-description">
         <p><strong>Descrption:</strong><%= @super.description %></p>
         <%= link_to "BOOK NOW", new_super_super_date_path(@super), class: "bt btn-success"%>
+        <%= link_to "Remove",
+                  super_path(@super),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
       </div>
   </div>
 </div>
-
