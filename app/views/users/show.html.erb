@@ -11,13 +11,26 @@
 
 <div class="container profile-overview" >
   <div class="profile-overview">
-    <h1 class="rented" style="margin-top: 50px; color: white;">Listed supers</h1>
+    <h1 class="rented" style="margin-top: 50px; color: white;">Your super dates</h1>
+        <% @super_dates.each do |sup_date| %>
+          <div class="card-super-date" style="border-radius: 20px; flex-direction: column; display: flex; padding: 20px 10px 20px 10px; background: white; margin 15px;">
+            <div class="card-img">
+              <% if sup_date.super.photos.attached? %>
+                  <%= cl_image_tag sup_date.super.photos[0].key, class: "card-img-top" %>
+              <% else %>
+                  <img src="" alt="">
+              <% end %>
+            </div>
+            <h4 class="name" style="text-transform: uppercase; font-size: 36px;  font-family: 'Bangers';"><%= sup_date.super.super_name %></h4>
+            <span class="badge badge-price" style="font-size: 18px;"> ✅  BOOKED </span>
+          </div>
+        <% end %>
   </div>
 </div>
 
 <div class="container profile-overview" >
   <div class="profile-overview">
-    <h1 class="rented" style="margin-top: 50px; color: white;">Your super dates</h1>
+    <h1 class="rented" style="margin-top: 50px; color: white;">Your supers</h1>
         <% @supers.each do |sup| %>
           <div class="card-super-date" style="border-radius: 20px; flex-direction: column; display: flex; padding: 20px 10px 20px 10px; background: white; margin 15px;">
             <div class="card-img">
@@ -27,9 +40,7 @@
                   <img src="" alt="">
               <% end %>
             </div>
-            <h4><%= sup.super_name %></h4>
-            <p> show date to check </p>
-            <span class="badge badge-price" style="font-size: 18px;"> ✅  BOOKED </span>
+            <h4 class="name" style="text-transform: uppercase; font-size: 36px;  font-family: 'Bangers';"><%= sup.super_name %></h4>
           </div>
         <% end %>
   </div>
