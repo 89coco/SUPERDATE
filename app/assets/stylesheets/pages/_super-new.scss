@@ -19,3 +19,19 @@
 .super-input {
   margin-bottom: 40px;
 }
+
+.traits-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.br-theme-bars-square .br-widget a.br-active, .br-theme-bars-square .br-widget a.br-selected {
+  border: 2px solid #5df542;
+  background-color: #167247;
+}
+
+.createbtn {
+  font-family: "Bangers";
+  width: 100%;
+}
