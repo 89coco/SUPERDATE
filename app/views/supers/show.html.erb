@@ -30,12 +30,12 @@
       <%# <img src="https://res.cloudinary.com/dk3fbg9zm/image/upload/v1645544420/strengths_lqfqdf.png" alt="strengths-bar" class="strengths"> %>
       <p><strong>Descrption:</strong><%= @super.description %></p>
       <div class="super-description">
-        <div><%= link_to "BOOK NOW", new_super_super_date_path(@super), class: "bt btn-success showbtn m-3"%></div>
-          <div><%= link_to 'Edit', edit_super_path(@super), class: "bt btn-success showbtn m-3" %></div>
+        <div><%= link_to "BOOK NOW", new_super_super_date_path(@super), class: "btn btn-success showbtn m-3"%></div>
+          <div><%= link_to 'Edit', edit_super_path(@super), class: "btn btn-success showbtn m-3" %></div>
           <div><%= link_to "Remove",
                     super_path(@super),
                     method: :delete,
-                    data: { confirm: "Are you sure?" }, class: "bt btn-success showbtn m-3" %></div>
+                    data: { confirm: "Are you sure?" }, class: "btn btn-success showbtn m-3" %></div>
       </div>
   </div>
 </div>
