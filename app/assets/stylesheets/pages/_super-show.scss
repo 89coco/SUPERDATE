@@ -18,18 +18,13 @@
   height: auto;
 }
 
-.spiderman {
-  width: 363px;
-  height: 350px;
-}
-
 .super-description {
   margin-top: 10px;
   border: 1px solid white;
   border-radius: 10px;
   background: radial-gradient(#00AC5B, white);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
  align-items: center;
 }
 
@@ -47,7 +42,7 @@
   object-position: center top;
 }
 
-#booknow {
+.showbtn {
   padding: 4px;
   text-decoration: none;
   border-radius: 40px;

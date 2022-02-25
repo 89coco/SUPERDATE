@@ -2,18 +2,38 @@
 
 <div class="container col-6 mt-3">
   <div class="show-card">
-      <%= cl_image_tag @super.photos[0].key, height: 300, width: 400, crop: :pad, class: "card-img-top"%>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= cl_image_tag @super.photos[0].key, height: 300, width: 400, crop: :pad, class: "card-img-top"%>
+          </div>
+          <div class="carousel-item">
+            <%= cl_image_tag @super.photos[1].key, height: 300, width: 400, crop: :pad, class: "card-img-top"%>
+          </div>
+          <div class="carousel-item">
+          <%= cl_image_tag @super.photos[2].key, height: 300, width: 400, crop: :pad, class: "card-img-top"%>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
       <h1> <%= @super.super_name %></h1>
       <h3><% @super.price %></h3>
       <img src="https://res.cloudinary.com/dk3fbg9zm/image/upload/v1645544420/strengths_lqfqdf.png" alt="strengths-bar" class="strengths">
+      <p><strong>Descrption:</strong><%= @super.description %></p>
       <div class="super-description">
-        <p><strong>Descrption:</strong><%= @super.description %></p>
-        <%= link_to "BOOK NOW", new_super_super_date_path(@super), class: "bt btn-success"%>
-        <%= link_to 'Edit', edit_super_path(@super) %>
-        <%= link_to "Remove",
-                  super_path(@super),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
+        <div><%= link_to "BOOK NOW", new_super_super_date_path(@super), class: "bt btn-success showbtn m-3"%></div>
+          <div><%= link_to 'Edit', edit_super_path(@super), class: "bt btn-success showbtn m-3" %></div>
+          <div><%= link_to "Remove",
+                    super_path(@super),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" }, class: "bt btn-success showbtn m-3" %></div>
       </div>
   </div>
 </div>
