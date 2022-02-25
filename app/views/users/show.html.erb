@@ -19,7 +19,7 @@
   <div class="profile-overview">
     <h1 class="rented" style="margin-top: 50px; color: white;">Your super dates</h1>
         <% @supers.each do |sup| %>
-          <div class="card-super-date" style="display: flex; padding: 20px 10px 20px 10px; background: white; margin 15px;">
+          <div class="card-super-date" style="border-radius: 20px; flex-direction: column; display: flex; padding: 20px 10px 20px 10px; background: white; margin 15px;">
             <div class="card-img">
               <% if sup.photos.attached? %>
                   <%= cl_image_tag sup.photos[0].key, class: "card-img-top" %>
@@ -28,6 +28,8 @@
               <% end %>
             </div>
             <h4><%= sup.super_name %></h4>
+            <p> show date to check </p>
+            <span class="badge badge-price" style="font-size: 18px;"> ✅  BOOKED </span>
           </div>
         <% end %>
   </div>
