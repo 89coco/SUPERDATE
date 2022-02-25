@@ -1,13 +1,10 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @supers = Super.where(user: current_user)
-    @super_dates = SuperDate.where(user: current_user)
-    # @super_dates = current_user.super_dates.super_id
     # if params[:filter].present?
-    #   @supers = Super.where( -- current user // current.user.supers
+      @super_dates = SuperDate.where(user: current_user)
     # else
-    #   @super_dates = Super_dates.where()
+      @supers = Super.where(user: current_user)
     # end
   end
 end
