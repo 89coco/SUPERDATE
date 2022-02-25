@@ -1,6 +1,10 @@
 class SuperDatesController < ApplicationController
   before_action :find_super, only: %i[new create]
 
+  def index
+    @super_dates = SuperDate.where(user: current_user)
+  end
+
   def new
     @super_date = SuperDate.new
   end
