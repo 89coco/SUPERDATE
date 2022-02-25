@@ -3,7 +3,7 @@
         <%= f.collection_radio_buttons :super_type, [['hero', 'Hero'], ['villain', 'Villain']], :first, :last, checked: @super.super_type ? @super.super_type : 0, collection_wrapper_tag: "div", collection_wrapper_class: "d-flex" %>
         <%= f.input :universe, collection: ['Marvel', 'DC', 'Pixar', 'Hogwarts'] %>
         <%= f.input :super_name %>
-        <%= f.input :strength %>
+        <%= f.input :strength, collection: (1..5).to_a, label: "Rate your strength" %>%>
         <%= f.input :humour %>
         <%= f.input :romance %>
         <%= f.input :kindness %>
