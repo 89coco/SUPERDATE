@@ -18,7 +18,7 @@
                   <div class="card-title-index">
                     <div class="d-flex justify-content-between">
                     <h5 class="super-name-index" style="text-transform: uppercase; font-size: 36px; font-family: 'Bangers';"><%= sup.super_name %></h5>
-                    <button class="btn-view-index" style="text-decoration: none; color: white;"> <%= link_to "VIEW", super_path(sup) %> </button>
+                    <%= link_to "VIEW", super_path(sup), class: "btn btn-success mt-3 p-3", id:"viewbtn" %>
                     </div>
                     <div class="universe-title"><%= sup.universe %> </div>
                     <div class="" style="text-align: center;">
