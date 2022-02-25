@@ -14,20 +14,20 @@
                 <img src="" alt="">
             <% end %>
             </div>
-                <div class="card-body">
-                  <div class="card-title">
-                    <h5 class="super-name" style="text-transform: uppercase; font-size: 36px; font-family: 'Bangers';"><%= sup.super_name %></h5>
-                    <%# <span class="universe-title"><%= sup.universe %></span> %>
-                    <%# <span class="badge badge-price" style="font-size: 18px;"> £<%= sup.price %>/HR</span> %>
-                  </div>
-                  <div class="character">
-                    <div class="character-trait"> STRENGTH  <%= "  ""🖤" * sup.strength.to_i %> </div>
-                    <div class="character-trait"> HUMOUR  <%= "  ""🖤" * sup.humour.to_i %> </div>
-                    <div class="character-trait"> ROMANCE  <%= "  ""🖤" * sup.romance.to_i %> </div>
-                    <div class="character-trait"> KINDNESS  <%= "  ""🖤" * sup.kindness.to_i %> </div>
-                  </div>
-                  <div class="card-select">
-                    <button class="btn-view" style="text-decoration: none;"> <%= link_to "VIEW", super_path(sup) %> </button>
+                <div class="card-body-index">
+                  <div class="card-title-index">
+                    <div class="d-flex justify-content-between">
+                    <h5 class="super-name-index" style="text-transform: uppercase; font-size: 36px; font-family: 'Bangers';"><%= sup.super_name %></h5>
+                    <button class="btn-view-index" style="text-decoration: none; color: white;"> <%= link_to "VIEW", super_path(sup) %> </button>
+                    </div>
+                    <div class="universe-title"><%= sup.universe %> </div>
+                    <div class="" style="text-align: center;">
+                      <div class="character-trait"> S T R E N G T H   :   <%= "  ""🖤" * sup.strength.to_i %> </div>
+                      <div class="character-trait"> H U M O U R   : <%= "  ""🖤" * sup.humour.to_i %> </div>
+                      <div class="character-trait"> R O M A N C E    : <%= "  ""🖤" * sup.romance.to_i %> </div>
+                      <div class="character-trait"> K I N D N E S S    :  <%= "  ""🖤" * sup.kindness.to_i %> </div>
+                    </div>
+                    <div class="badge badge-price" style="font-size: 18px; margin-left: 200px;"> £<%= sup.price %> /HR </div>
                   </div>
                 </div>
             </div>
