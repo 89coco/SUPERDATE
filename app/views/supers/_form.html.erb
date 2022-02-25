@@ -1,16 +1,21 @@
-<div class="container">
+<div class="container create-super">
       <%= simple_form_for(@super) do |f| %>
-        <%= f.collection_radio_buttons :super_type, [['hero', 'Hero'], ['villain', 'Villain']], :first, :last, checked: @super.super_type ? @super.super_type : 0, collection_wrapper_tag: "div", collection_wrapper_class: "d-flex" %>
+        <div class="radios">
+          <%= f.collection_radio_buttons :super_type, [['hero', 'Hero'], ['villain', 'Villain']], :first, :last %>
+        </div>
         <%= f.input :universe, collection: ['Marvel', 'DC', 'Pixar', 'Hogwarts'] %>
-        <%= f.input :super_name %>
-        <%= f.input :strength %>
-        <%= f.input :humour %>
-        <%= f.input :romance %>
-        <%= f.input :kindness %>
+        <%= f.input :super_name, label: "Name" %>
+        <%= f.input :address %>
+        <div class="traits-container">
+          <div><%= f.input :strength, collection: (1..5).to_a %></div>
+          <div><%= f.input :humour, collection: (1..5).to_a %></div>
+          <div><%= f.input :romance, collection: (1..5).to_a %></div>
+          <div><%= f.input :kindness, collection: (1..5).to_a %></div>
+        </div>
         <%= f.input :price %>
         <%= f.input :description %>
         <%= f.input :availability %>
         <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-        <%= f.submit class: 'btn btn-success' %>
+        <%= f.submit class: 'btn btn-success createbtn', label: "Create" %>
       <% end %>
 </div>

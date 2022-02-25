@@ -32,6 +32,7 @@ class SupersController < ApplicationController
   end
 
   def show
+    @supers = Super.all
   end
 
   def edit

@@ -1,19 +1,41 @@
 <h1 class="super">Your Super Selection</h1>
 
-<div class="container col-6 mt-3">
+<div class="container p-4 mt-3">
   <div class="show-card">
-      <%= cl_image_tag @super.photos[0].key, height: 300, width: 400, crop: :pad, class: "card-img-top"%>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <% @super.photos.each_with_index do |sup, index| %>
+            <div class="carousel-item <%= index == 0 ? "active" : "" %>">
+              <%= cl_image_tag sup.key, height: 300, width: 400, crop: :pad, class: "card-img-top"%>
+            </div>
+          <% end %>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
       <h1> <%= @super.super_name %></h1>
       <h3><% @super.price %></h3>
-      <img src="https://res.cloudinary.com/dk3fbg9zm/image/upload/v1645544420/strengths_lqfqdf.png" alt="strengths-bar" class="strengths">
+          <div class="" style="text-align: center;">
+            <div class="character-trait"> S T R E N G T H   :   <%= "  ""🖤" * @super.strength.to_i %> </div>
+            <div class="character-trait"> H U M O U R   : <%= "  ""🖤" * @super.humour.to_i %> </div>
+            <div class="character-trait"> R O M A N C E    : <%= "  ""🖤" * @super.romance.to_i %> </div>
+            <div class="character-trait"> K I N D N E S S    :  <%= "  ""🖤" * @super.kindness.to_i %> </div>
+          </div>
+      <%# <img src="https://res.cloudinary.com/dk3fbg9zm/image/upload/v1645544420/strengths_lqfqdf.png" alt="strengths-bar" class="strengths"> %>
+      <p><strong>Descrption:</strong><%= @super.description %></p>
       <div class="super-description">
-        <p><strong>Descrption:</strong><%= @super.description %></p>
-        <%= link_to "BOOK NOW", new_super_super_date_path(@super), class: "bt btn-success"%>
-        <%= link_to 'Edit', edit_super_path(@super) %>
-        <%= link_to "Remove",
-                  super_path(@super),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
+        <div><%= link_to "BOOK NOW", new_super_super_date_path(@super), class: "bt btn-success showbtn m-3"%></div>
+          <div><%= link_to 'Edit', edit_super_path(@super), class: "bt btn-success showbtn m-3" %></div>
+          <div><%= link_to "Remove",
+                    super_path(@super),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" }, class: "bt btn-success showbtn m-3" %></div>
       </div>
   </div>
 </div>

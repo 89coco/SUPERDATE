@@ -13,7 +13,7 @@
     </ul>
     <div class="card-body">
       <%= link_to "Make another booking", supers_path, class: "bookbtn" %>
-      <a href="#" class="bookbtn">Profile</a>
+      <%= link_to "Profile", user_path(current_user), class: "bookbtn" %>
     </div>
   </div>
 </div>
