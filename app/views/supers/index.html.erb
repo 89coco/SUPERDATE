@@ -16,18 +16,18 @@
             </div>
                 <div class="card-body">
                   <div class="card-title">
-                    <h5 class="card-title super-name" style="text-transform: uppercase; font-size: 36px; font-family: 'Bangers';"><%= sup.super_name %></h5>
-                    <h6 class="universe-title"><%= sup.universe %></h6>
-                    <span class="badge badge-price" style="font-size: 18px;"> £<%= sup.price %>/HR</span>
+                    <h5 class="super-name" style="text-transform: uppercase; font-size: 36px; font-family: 'Bangers';"><%= sup.super_name %></h5>
+                    <%# <span class="universe-title"><%= sup.universe %></span> %>
+                    <%# <span class="badge badge-price" style="font-size: 18px;"> £<%= sup.price %>/HR</span> %>
                   </div>
                   <div class="character">
-                    <p class="character-trait"> STRENGTH  <%= "  ""🖤" * sup.strength.to_i %> </p>
-                    <p class="character-trait"> HUMOUR  <%= "  ""🖤" * sup.humour.to_i %> </p>
-                    <p class="character-trait"> ROMANCE  <%= "  ""🖤" * sup.romance.to_i %> </p>
-                    <p class="character-trait"> KINDNESS  <%= "  ""🖤" * sup.kindness.to_i %> </p>
+                    <div class="character-trait"> STRENGTH  <%= "  ""🖤" * sup.strength.to_i %> </div>
+                    <div class="character-trait"> HUMOUR  <%= "  ""🖤" * sup.humour.to_i %> </div>
+                    <div class="character-trait"> ROMANCE  <%= "  ""🖤" * sup.romance.to_i %> </div>
+                    <div class="character-trait"> KINDNESS  <%= "  ""🖤" * sup.kindness.to_i %> </div>
                   </div>
                   <div class="card-select">
-                    <button class="btn-view" style="text-decoration: none;"> <%= link_to "VIEW", super_path(sup)%> </button>
+                    <button class="btn-view" style="text-decoration: none;"> <%= link_to "VIEW", super_path(sup) %> </button>
                   </div>
                 </div>
             </div>

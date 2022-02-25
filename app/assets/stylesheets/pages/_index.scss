@@ -20,6 +20,7 @@
   border-radius: 10px;
   letter-spacing: 0.025em;
   font-size: 18px;
+  margin: 0;
 }
 
 .btn-view:hover {
@@ -40,14 +41,18 @@
   }
 
 .card-title {
-  display: flex;
-  flex-direction: column;
-  // align-items: center;
   color: #483876;
+  width: 400%;
+  height: 20%;
+  border: 2px solid red;
+}
+
+.super-name {
+  border: 2px solid orange;
+  width: 100%;
 }
 
 .card-select {
-  display: flex;
   flex-direction: column;
   // align-items: center;
 }
@@ -59,10 +64,17 @@
 }
 
 .character {
-  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
   margin-top: 15px;
   margin-bottom: 15px;
   letter-spacing: 5px;
+  border: 2px solid green;
+  height: 90%;
+  width: 90%;
+  position: relative;
+  top: 200px;
 }
 
 .card-img > img {
@@ -93,4 +105,7 @@
 .card-body {
   display: flex;
   align-items: left !important;
+  border: 2px solid red;
+  height: 70px;
+  padding: 0 !important;
 }
