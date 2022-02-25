@@ -1,9 +1,12 @@
-<div class="container">
-<h3>Create a Superdate</h3>
+<div class="container create-super">
+<h3 style="text-align: center;">Create a Superdate</h3>
       <%= simple_form_for(@super) do |f| %>
-        <%= f.collection_radio_buttons :super_type, [['hero', 'Hero'], ['villain', 'Villain']], :first, :last %>
+        <div class="radios">
+          <%= f.collection_radio_buttons :super_type, [['hero', 'Hero'], ['villain', 'Villain']], :first, :last %>
+        </div>
         <%= f.input :universe, collection: ['Marvel', 'DC', 'Pixar', 'Hogwarts'] %>
         <%= f.input :super_name %>
+        <%= f.input :address %>
         <%= f.input :strength %>
         <%= f.input :humour %>
         <%= f.input :romance %>
