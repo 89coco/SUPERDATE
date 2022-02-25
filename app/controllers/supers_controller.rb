@@ -16,6 +16,14 @@ class SupersController < ApplicationController
   end
 
   def index
+    @supers = Super.all
+    @markers = @supers.geocoded.map do |sup|
+      {
+        lat: sup.latitude,
+        lng: sup.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { sup: sup })
+      }
+    end
     if params[:filter].present?
       @supers = Super.where(super_type: params[:filter]).reverse
     else
@@ -46,6 +54,22 @@ class SupersController < ApplicationController
   end
 
   def set_params
-    params.require(:super).permit(:super_name, :user_id, :super_type, :universe, :availability, :price, :strength, :romance, :humour, :kindness, :description, photos: [])
+    params.require(:super).permit(
+      :super_name,
+      :user_id,
+      :super_type,
+      :universe,
+      :availability,
+      :price,
+      :strength,
+      :romance,
+      :humour,
+      :kindness,
+      :description,
+      :address,
+      :latitude,
+      :longitude,
+      photos: []
+    )
   end
 end
