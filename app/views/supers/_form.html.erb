@@ -6,14 +6,16 @@
         <%= f.input :universe, collection: ['Marvel', 'DC', 'Pixar', 'Hogwarts'] %>
         <%= f.input :super_name, label: "Name" %>
         <%= f.input :address %>
-        <div><%= f.input :strength, collection: (1..5).to_a %></div>
-        <div><%= f.input :humour, collection: (1..5).to_a %></div>
-        <div><%= f.input :romance, collection: (1..5).to_a %></div>
-        <div><%= f.input :kindness, collection: (1..5).to_a %></div>
+        <div class="traits-container">
+          <div><%= f.input :strength, collection: (1..5).to_a %></div>
+          <div><%= f.input :humour, collection: (1..5).to_a %></div>
+          <div><%= f.input :romance, collection: (1..5).to_a %></div>
+          <div><%= f.input :kindness, collection: (1..5).to_a %></div>
+        </div>
         <%= f.input :price %>
         <%= f.input :description %>
         <%= f.input :availability %>
         <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-        <%= f.submit class: 'btn btn-success', label: "Create" %>
+        <%= f.submit class: 'btn btn-success createbtn', label: "Create" %>
       <% end %>
 </div>

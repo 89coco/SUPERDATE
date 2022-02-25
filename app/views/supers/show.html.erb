@@ -25,7 +25,13 @@
       </div>
       <h1> <%= @super.super_name %></h1>
       <h3><% @super.price %></h3>
-      <img src="https://res.cloudinary.com/dk3fbg9zm/image/upload/v1645544420/strengths_lqfqdf.png" alt="strengths-bar" class="strengths">
+          <div class="" style="text-align: center;">
+            <div class="character-trait"> S T R E N G T H   :   <%= "  ""🖤" * @super.strength.to_i %> </div>
+            <div class="character-trait"> H U M O U R   : <%= "  ""🖤" * @super.humour.to_i %> </div>
+            <div class="character-trait"> R O M A N C E    : <%= "  ""🖤" * @super.romance.to_i %> </div>
+            <div class="character-trait"> K I N D N E S S    :  <%= "  ""🖤" * @super.kindness.to_i %> </div>
+          </div>
+      <%# <img src="https://res.cloudinary.com/dk3fbg9zm/image/upload/v1645544420/strengths_lqfqdf.png" alt="strengths-bar" class="strengths"> %>
       <p><strong>Descrption:</strong><%= @super.description %></p>
       <div class="super-description">
         <div><%= link_to "BOOK NOW", new_super_super_date_path(@super), class: "bt btn-success showbtn m-3"%></div>
