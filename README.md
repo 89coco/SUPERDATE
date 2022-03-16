@@ -5,6 +5,11 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 
 ✨ SUPERDATES is a pretend dating app where you can connect with your all-time favourite super hero or villain ✨
 
-### More Info
+### Key Features
 
-### Link
+✨ Social and Sign-up Login
+✨ Feedback, ratings and reviews
+✨ Search, booking and calendar
+✨ Map, geolocation
+✨ Picture upload, cloudinary & carousel
+
