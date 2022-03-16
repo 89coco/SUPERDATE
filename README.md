@@ -7,9 +7,9 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 
 ### Key Features
 
-✨ Social and Sign-up Login
-✨ Feedback, ratings and reviews
-✨ Search, booking and calendar
-✨ Map, geolocation
-✨ Picture upload, cloudinary & carousel
+- ✨ Social and Sign-up Login
+- ✨ Feedback, ratings and reviews
+- ✨ Search, booking and calendar
+- ✨ Map, geolocation
+- ✨ Picture upload, cloudinary & carousel
 
